@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.lts.autowiring.ShapeFactory;
 import com.lts.foodwiring.FoodPanda;
+import com.lts.vehicle.VehicleDetails;
 
 @SpringBootApplication
 public class Trial1Application implements CommandLineRunner {
@@ -37,6 +38,9 @@ public class Trial1Application implements CommandLineRunner {
 		List<String> menuList =  foodPanda.showMenu("indian"); 
 		for(String iterator : menuList)
 			System.out.println(iterator);
+		
+		VehicleDetails vehicleDetails = context.getBean(VehicleDetails.class);
+		vehicleDetails.getMileage(5,"bike");
 		
 	}
 		
