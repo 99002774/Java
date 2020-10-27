@@ -31,7 +31,7 @@ public class BookDAOImpl implements BookDAO {
 		// TODO Auto-generated method stub
 		List<Book> newBookList = new ArrayList<>();
 		for (Book book : showBookList()) {
-			if(book.getCatrgory().equals(category))
+			if(book.getCategory().equals(category))
 				newBookList.add(book);
 		}
 		
